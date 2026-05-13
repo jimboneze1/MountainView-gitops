@@ -18,6 +18,9 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 name: "📱🔐 Personal mobile devices"
 controls:
+  ipados_updates:
+    deadline: "2026-07-30"
+    minimum_version: "26.2"
   setup_experience:
     ###########################################################
     # Uncomment to use single-sign on (SSO) to authenticate
@@ -43,6 +46,9 @@ controls:
   ###########################################################
   apple_settings:
     configuration_profiles:
+      - path: ../platforms/ios/configuration_profiles/passcode-settings.json
+        labels_exclude_any:
+          - C-Suite
       # … e.g.
       # - path: ../lib/ios/declaration-profiles/Passcode settings.json
       # - path: ../lib/ios/configuration-profiles/self-service.mobileconfig
@@ -112,3 +118,4 @@ labels:
     description: Hosts belonging to the C-Suite
     label_membership_type: manual
     hosts:
+
